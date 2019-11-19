@@ -9,11 +9,11 @@ function returnRepos(handle) {
     .catch(err => alert(`error:`+ err))
 }
 function handleSubmit() {
-    $('form').on('submit', 'button', function (event) {
-        event.preventDefualt;
+    $('form').on('click', 'button', function (event) {
+        event.preventDefault();
         const handle = $('input').val();
         returnRepos(handle);
-    })
+   })
 }
 
 $(handleSubmit);
