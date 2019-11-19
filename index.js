@@ -9,7 +9,7 @@ function returnRepos(handle) {
     .catch(err => alert(`error:`+ err))
 }
 function handleSubmit() {
-    $('form').on('click', 'button', function (event) {
+    $('form').on('submit', 'button', function (event) {
         event.preventDefualt;
         const handle = $('input').val();
         returnRepos(handle);
