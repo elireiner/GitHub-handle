@@ -5,7 +5,7 @@ function returnRepos(handle) {
     fetch(url)
     .then(response => response.json())
     .then(responseJson => console.log(responseJson))
-    .catch(err => alert(`there was an error`))
+    .catch(err => console.log(`error:`, err))
 }
 function handleSubmit() {
     $('form').on('click', 'button', function (event) {
