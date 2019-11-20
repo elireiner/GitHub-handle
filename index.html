@@ -11,10 +11,20 @@
 
 <body>
     <div>
-        <form>
-            <input type="text" placeholder="Search..">
-            <button>Submit</button>
-        </form>
+        <h1>Search for a user's repositories </h1>
+        <section class="form-section">
+            <form>
+                <input type="text" placeholder="Search..">
+                <input type="submit" value="Go">
+            </form>
+        </section>
+
+        <section id="results" class="hidden">
+            <h2 id="user-header">
+                </h1>
+                <ul id="results-list">
+                </ul>
+        </section>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="index.js"></script>
