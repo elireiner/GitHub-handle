@@ -29,7 +29,17 @@ function getRepos(handle) {
     const url = `https://api.github.com/users/${handle}/repos`
     console.log(url)
     fetch(url)
-        .then(response => response.json())
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            }
+            else {
+                ///why is this not working?
+                $('#user-header').empty();
+                $('#results-list').empty();
+                throw new Error(response.statusText);
+            }
+        })
         .then(responseJson => displayRepos(responseJson, handle))
         .catch(err => alert(`error:` + err))
 }
